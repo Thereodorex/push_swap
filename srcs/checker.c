@@ -6,7 +6,7 @@
 /*   By: jcorwin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 12:06:08 by jcorwin           #+#    #+#             */
-/*   Updated: 2019/02/02 19:11:35 by jcorwin          ###   ########.fr       */
+/*   Updated: 2019/02/02 20:20:33 by jcorwin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,8 +90,7 @@ int				main(int argc, char **argv)
 	p.d.step = 0;
 	if (!p.a)
 		return (0);
-	if (test(&p))
-		get_commands(&p);
+	get_commands(&p);
 	ft_printf(test(&p) ? "KO" : "OK");
 	list_del(p.a);
 	list_del(p.b);
