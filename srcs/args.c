@@ -6,7 +6,7 @@
 /*   By: jcorwin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/02 15:43:33 by jcorwin           #+#    #+#             */
-/*   Updated: 2019/02/02 19:52:46 by jcorwin          ###   ########.fr       */
+/*   Updated: 2019/02/02 20:14:39 by jcorwin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,10 @@ static void		check_num(char *ptr)
 {
 	int		minus;
 	char	*tmp;
+	int		i;
 
 	minus = 0;
+	i = 0;
 	if (*ptr == '-')
 	{
 		++ptr;
@@ -27,12 +29,15 @@ static void		check_num(char *ptr)
 		++ptr;
 	tmp = ptr;
 	while (*tmp && *tmp != ' ')
+	{
+		if ((i += (i || *tmp != '0' ? 1 : 0)) > 10)
+			STOP;
 		if (!ft_isdigit(*tmp++))
 			STOP;
+	}
 	if (ptr[0] >= '2' && ptr[1] >= '1' && ptr[2] >= '4' && ptr[3] >= '7' &&
 		ptr[4] >= '4' && ptr[5] >= '8' && ptr[6] >= '3' && ptr[7] >= '6' &&
-		ptr[8] >= '4' && ((minus ? ptr[9] == '9' : ptr[9] > '7') ||
-		(ptr[9] >= '0' && ptr[10] >= '0')))
+		ptr[8] >= '4' && (minus ? ptr[9] == '9' : ptr[9] > '7'))
 		STOP;
 }
 
