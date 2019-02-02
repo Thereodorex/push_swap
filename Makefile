@@ -6,7 +6,7 @@
 #    By: jcorwin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/22 11:57:34 by jcorwin           #+#    #+#              #
-#    Updated: 2019/02/02 18:16:32 by jcorwin          ###   ########.fr        #
+#    Updated: 2019/02/02 19:20:16 by jcorwin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,16 +30,16 @@ $(NAME2): $(SRC) $(INC)
 	gcc -o $(NAME2) srcs/checker.c $(SRC) -L ./libft/ -lft -L ./ft_printf/ -lftprintf
 
 libs:
-	cd libft/ && make
-	cd ft_printf/ && make
+	cd llibft/ && make
+	cd lprintf/ && make
 
 clean:
-	cd libft/ && make clean
-	cd ft_printf/ && make clean
+	cd llibft/ && make clean
+	cd lprintf/ && make clean
 
 fclean:
-	cd libft/ && make fclean
-	cd ft_printf/ && make fclean
+	cd llibft/ && make fclean
+	cd lprintf/ && make fclean
 	rm -f $(NAME1) $(NAME2)
 
 re: fclean all
