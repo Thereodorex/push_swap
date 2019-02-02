@@ -6,7 +6,7 @@
 #    By: jcorwin <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/22 11:57:34 by jcorwin           #+#    #+#              #
-#    Updated: 2019/02/02 19:20:16 by jcorwin          ###   ########.fr        #
+#    Updated: 2019/02/02 19:49:08 by jcorwin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,10 +24,10 @@ FLAGS = -Wall -Werror -Wextra
 all: libs $(NAME1) $(NAME2)
 
 $(NAME1): $(SRC) $(INC)
-	gcc -o $(NAME1) srcs/push_swap.c $(SRC) -L ./libft/ -lft -L ./ft_printf/ -lftprintf
+	gcc -o $(NAME1) srcs/push_swap.c $(SRC) -L ./llibft/ -lft -L ./lprintf/ -lftprintf
 
 $(NAME2): $(SRC) $(INC)
-	gcc -o $(NAME2) srcs/checker.c $(SRC) -L ./libft/ -lft -L ./ft_printf/ -lftprintf
+	gcc -o $(NAME2) srcs/checker.c $(SRC) -L ./llibft/ -lft -L ./lprintf/ -lftprintf
 
 libs:
 	cd llibft/ && make
