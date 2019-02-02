@@ -6,7 +6,7 @@
 /*   By: jcorwin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/21 15:09:49 by jcorwin           #+#    #+#             */
-/*   Updated: 2019/02/02 19:07:45 by jcorwin          ###   ########.fr       */
+/*   Updated: 2019/02/02 19:51:44 by jcorwin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,7 @@
 # define PUSH(a, b) a = o_push(a, &(b))
 # define ROT(a) if (a) a = a->next
 # define RROT(a) if (a) a = a->prev
-//# define PRINT(a, b) list_print("A", a); list_print("B", b)
 # define STOP {ft_fprintf(2, "Error\n"); exit(0);}
-//# define USAGE "usage: push_swap [-vcs] number1 number2 ...\n"
-//# define MAL "Error: malloc returned nothing\n"
 # define DO(p, c) {do_op(p, c); com_print(c); if (p->d.on) psw_debug(p, c);}
 # define DO_C(p, c) {do_op(p, c); if (p->d.on) psw_debug(p, c);}
 
